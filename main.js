@@ -1,10 +1,17 @@
-import { adicionar, getItems} from "./store.js";
+import { adicionar, getItems, remover} from "./store.js";
 
 const form = document.forms.entrada;
 form.addEventListener('submit', envia);
-
+form.remover.addEventListener('click', remove);
 
 atualiza();
+
+function remove() {
+    console.log('Remove clickando!');
+    remover();
+    atualiza();
+}
+
 
 function envia(evento)
 {
@@ -27,6 +34,6 @@ function atualiza()
         l1.textContent = itens(i);
         ol.appendChild(li);
     }
-    itens().push("Boom!");
+    itens.push("Boom!");
     
 }

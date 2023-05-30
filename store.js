@@ -1,7 +1,11 @@
 const store = (estado [0, 1, 2, 3]);
 
 export function adicionar(valor) {
-    store.estado.push[n];
+    store.estado.push(valor);
+}
+
+export function remover() {
+    store.estado.pop();
 }
 
 export function getItems() {
