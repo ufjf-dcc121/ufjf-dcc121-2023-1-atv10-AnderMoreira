@@ -1,7 +1,7 @@
+import store from "./store.js"
+
 const form = document.forms.entrada;
 form.addEventListener('submit', envia);
-
-let estado = 0;
 
 atualiza();
 
@@ -9,13 +9,12 @@ function envia(evento)
 {
     evento.preventDefault();
     console.log('Formulário Enviado!');
-    estado++;
+    store.estado++;
     atualiza();
 }
 
-
 function atualiza()
 {
-    document.querySelector('ol');
-    ol.innerHTML = <li>(estado)</li>;
+    const ol = document.querySelector('ol');
+    ol.innerHTML = <li>(store.estado)</li>;
 }
